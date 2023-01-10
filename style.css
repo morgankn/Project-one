@@ -1,0 +1,26 @@
+body, html {
+    margin-left:1%;
+    margin-right:1%;
+    margin-bottom:1%;
+    margin-top:1%;
+    }
+
+.menu {
+    background-color: #ce5a00;
+    ;
+}
+a {
+    color: #ffaf80;
+
+    &:hover{
+        background-color: lighten(#ce5a00, 20%);
+    }
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+}
+
+
+
