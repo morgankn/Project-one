@@ -1,25 +1,72 @@
-body, html {
-    margin-left:1%;
-    margin-right:1%;
-    margin-bottom:1%;
-    margin-top:1%;
-    }
+:root {
+    --lightblue: #8db4ad;
+    --red: #e9311a;
+    --orange: #ed6335;
+    --darkblue: #064c72;
+    --peach: #ecae7d;
+    --teal: #026c80;
 
+}
+body, html {
+    margin-left:.25%;
+    margin-right:.25%;
+    margin-bottom:.25%;
+    margin-top:.25%;
+    background-color: var(--peach);
+    font-family: 'Shrikhand', cursive;
+
+    }
+nav {
+ font-size: 24px;
+ border-radius: 3px;
+}
 .menu {
-    background-color: #ce5a00;
+    background-color: var(--lightblue);
     ;
 }
 a {
-    color: #ffaf80;
+    color: #e9311a;
+    text-shadow: 2px 2px var(--peach);
 
-    &:hover{
-        background-color: lighten(#ce5a00, 20%);
+    &:hover{ 
+        background-color: ;
+        color: #7ec384;
     }
 }
 
-h3 {
+.container {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    background-color: var(--orange);
+    border-radius: 6px;
+    font-size: 30px;
+    margin-top: 2px;
     display: flex;
     align-items: center;
+    font-family: 'Shrikhand', cursive;
+    box-shadow: 0 0 10px 2px var(--darkblue);
+
+}
+
+img {
+    max-width: 650px;
+    margin: 16px;
+    border-radius: 12px;
+    border: var(--darkblue) solid 5px;
+}
+
+#workout-choice {
+    display: inline-block;
+    border: 8px solid;
+    border-color: #6aa5a9;
+    border-radius: 4px;
+    margin: 2px;
+
+}
+#exercise-one {
+
 }
 
 
