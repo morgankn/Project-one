@@ -65,7 +65,21 @@ img {
     margin: 2px;
 
 }
-#exercise-one {
+#container-input {
+    font-family: 'Shrikhand', cursive;
+    background-color: var(--lightblue);
+}
+h3 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 24px;
+    color: var(--orange);
+    text-shadow: 3px 3px var(--teal)
+}
+
+ p {
+    border: var(--red) solid 4px;
+    font-size: 20px;
+    font-family: 'Shrikhand', cursive;
 
 }
 
