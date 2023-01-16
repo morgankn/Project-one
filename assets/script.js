@@ -1,5 +1,6 @@
-var btn = document.querySelector('.button');
-
+var btn = document.querySelector(".button");
+var savedworkouts = [];
+var workouts = JSON.parse(localStorage.getItem("savedworkouts"));
 
 var selectedExercise = [
   "abdominals",
@@ -24,8 +25,9 @@ function muscleGroups() {
   for (var i = 0; i < muscle.length; i++);
   console.log(muscleGroups);
 }
-function fetchExercises(){
-  var muscle = selectedExercise[Math.floor(Math.random() * selectedExercise.length)];
+function fetchExercises() {
+  var muscle =
+    selectedExercise[Math.floor(Math.random() * selectedExercise.length)];
   fetch("https://api.api-ninjas.com/v1/exercises?muscle=" + muscle, {
     method: "GET",
     headers: { "X-Api-Key": "GDPoj1GGfvpCVpqAi3UAYg==YnZXl7SnTbs8tAMJ" },
@@ -35,46 +37,40 @@ function fetchExercises(){
     })
     .then(function (data) {
       console.log(data);
-      displayExercise(data)
+      displayExercise(data);
     })
-  
+
     .catch(function (jqXHR) {
       console.error("Error: ", jqXHR);
-    })
-};
+    });
+}
 
 function chooseMuscle() {
   console.log(data.list[0].muscle);
 }
 
-function displayExercise(data){
-  // empty the element 
-  for(var i =0; i <= 3; i ++ ){
-    var exerciseOneEl = document.querySelector('#exercise-one');
-    var titleOne = document.createElement('h3');
+function displayExercise(data) {
+  var exerciseGroup = [];
+
+  // empty the element
+  for (var i = 0; i <= 3; i++) {
+    var exerciseOneEl = document.querySelector("#exercise-one");
+    var titleOne = document.createElement("h3");
     titleOne.textContent = data[i].name;
     exerciseOneEl.appendChild(titleOne);
-    var type =document.createElement('h4');
+    var type = document.createElement("h4");
     type.textContent = "Type: " + data[i].type;
     exerciseOneEl.appendChild(type);
-    var instructions = document.createElement('p');
+    var instructions = document.createElement("p");
     type.textContent = "Instrctions: " + data[i].instructions;
     exerciseOneEl.appendChild(instructions);
+    exerciseGroup.push(data[i].name);
   }
-};
 
+  localStorage.setItem("dailyexercises", JSON.stringify(exerciseGroup));
+}
 
-btn.addEventListener('click', fetchExercises);
+btn.addEventListener("click", fetchExercises);
 
-
-
-// // var newDiv = document.createElement('div')
-// // var newContent = document.createTextNode("Hi there and greetings!");
-// // newDiv.appendChild(newContent);
-
-// // selectedExercise
-
-
-
-
-// // 03-ACT,27- README
+// Need to figure out how to store four exercises in local storage,
+// right now is randomizing 1 but only showing one.
