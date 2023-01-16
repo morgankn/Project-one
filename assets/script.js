@@ -1,4 +1,6 @@
 var btn = document.querySelector('.button');
+var savedworkouts = [];
+var workouts = JSON.parse(localStorage.getItem("savedworkouts"));
 
 
 var selectedExercise = [
@@ -48,6 +50,7 @@ function chooseMuscle() {
 }
 
 function displayExercise(data){
+  var exerciseGroup = [];
   // empty the element
    var exerciseInput = document.querySelector('#container-input');
    exerciseInput.innerHTML =''; 
@@ -66,7 +69,9 @@ function displayExercise(data){
     instructions.textContent = "Instrctions: " + data[i].instructions;
     exerciseOneEl.appendChild(instructions);
     exerciseInput.appendChild(exerciseOneEl);
+    exerciseGroup.push(data[i].name);
   }
+  localStorage.setItem("dailyexercises", JSON.stringify(exerciseGroup));
 };
 
 btn.addEventListener('click', fetchExercises);
