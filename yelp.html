@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yelp</title>
+  </head>
+
+<body>
+  <button id="foodBtn">Where I go</button>
+  <div id="container"></div>
+
+<script>
+  var foodBtn = document.querySelector("#foodBtn");
+
+function fetchRestaurant(){
+  const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer VxrpWfJqWDXlR2UCc_nybZGtSgwqpgzl6KThOagOjzq-Fc7bvxyA79XBRUX9tbDPDvCDGUxDpGDtu7j_vtoI3D-9RfUJMMkfcfi4_VFK3IIS_z1Fzlc_4of6M4LBY3Yx'
+  }
+};
+
+fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=philadelphia&term=restaurant&radius=2000&categories=healthy&sort_by=best_match&limit=10', options)
+  .then(function(result){
+    return result.json();
+  })
+  .then(function(data){
+    console.log(data);
+    restaurantChoice(data)
+  })
+
+  .catch(function(err) {
+    console.error("Error: ", err);
+  })
+}
+
+function restaurantChoice(data){
+  var item = data[Math.floor(Math.random() * data.length)];
+  return item;
+}
+
+foodBtn.addEventListener('click', fetchRestaurant)
+
+</script>
+</body>
+</html>
