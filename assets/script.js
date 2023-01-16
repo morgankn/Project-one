@@ -48,9 +48,14 @@ function chooseMuscle() {
 }
 
 function displayExercise(data){
-  // empty the element 
+  // empty the element
+   var exerciseInput = document.querySelector('#container-input');
+   exerciseInput.innerHTML =''; 
+
   for(var i =0; i <= 3; i ++ ){
-    var exerciseOneEl = document.querySelector('#exercise-one');
+    // var exerciseOneEl = document.querySelector('#exercise-'+i);
+    var exerciseOneEl = document.createElement('div');
+    exerciseOneEl.classList.add('exerciseCard');
     var titleOne = document.createElement('h3');
     titleOne.textContent = data[i].name;
     exerciseOneEl.appendChild(titleOne);
@@ -58,23 +63,14 @@ function displayExercise(data){
     type.textContent = "Type: " + data[i].type;
     exerciseOneEl.appendChild(type);
     var instructions = document.createElement('p');
-    type.textContent = "Instrctions: " + data[i].instructions;
+    instructions.textContent = "Instrctions: " + data[i].instructions;
     exerciseOneEl.appendChild(instructions);
+    exerciseInput.appendChild(exerciseOneEl);
   }
 };
-
 
 btn.addEventListener('click', fetchExercises);
 
 
 
-// // var newDiv = document.createElement('div')
-// // var newContent = document.createTextNode("Hi there and greetings!");
-// // newDiv.appendChild(newContent);
 
-// // selectedExercise
-
-
-
-
-// // 03-ACT,27- README

@@ -24,17 +24,35 @@ nav {
     background-color: var(--lightblue);
     ;
 }
-a {
+.navbar {
     color: #e9311a;
     text-shadow: 2px 2px var(--peach);
 
     &:hover{ 
-        background-color: ;
+        /* background-color: var(--) ; */
         color: #7ec384;
     }
 }
 
 .container {
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container {
+    max-width: 700px;
+    margin: 16px;
+    border-radius: 12px;
+    border: var(--darkblue) solid 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.orbit-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orbit-image {
     display: flex;
     justify-content: center;
 }
@@ -50,38 +68,64 @@ a {
 
 }
 
-img {
-    max-width: 650px;
-    margin: 16px;
-    border-radius: 12px;
-    border: var(--darkblue) solid 5px;
-}
 
-#workout-choice {
-    display: inline-block;
-    border: 8px solid;
-    border-color: #6aa5a9;
-    border-radius: 4px;
-    margin: 2px;
-
-}
 #container-input {
     font-family: 'Shrikhand', cursive;
-    background-color: var(--lightblue);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
+.exerciseCard {
+    font-family: 'Shrikhand', cursive;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 24px;
+    background-color: var(--lightblue);
+    width: 48%;
+    align-items: center;
+    border: solid 4px var(--red);
+    margin: 4px;
+    padding: 4px;
+    background-color: var(--lightblue);
+
+
+}
+
 h3 {
     font-family: 'Shrikhand', cursive;
-    font-size: 24px;
+    font-size: 26px;
     color: var(--orange);
     text-shadow: 3px 3px var(--teal)
 }
-
- p {
-    border: var(--red) solid 4px;
-    font-size: 20px;
+h4 {
     font-family: 'Shrikhand', cursive;
+    color: var(--red);
+    text-shadow: 2px 2px var(--peach);
+    font-size: 18px;
 
 }
 
+ p {
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
+
+}
+#box {
+    width:400px;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#water {
+    border: solid 4px var(--red);
+    color: white;
+    background-color: var(--teal);
+    position: relative;
+    padding: 4px;
+}
 
 
