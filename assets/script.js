@@ -50,11 +50,15 @@ function chooseMuscle() {
 }
 
 function displayExercise(data) {
-  var exerciseGroup = [];
-
   // empty the element
+  var exerciseGroup = [];
+  var exerciseInput = document.querySelector("#container-input");
+  exerciseInput.innerHTML = "";
+
   for (var i = 0; i <= 3; i++) {
-    var exerciseOneEl = document.querySelector("#exercise-one");
+    // var exerciseOneEl = document.querySelector('#exercise-'+i);
+    var exerciseOneEl = document.createElement("div");
+    exerciseOneEl.classList.add("exerciseCard");
     var titleOne = document.createElement("h3");
     titleOne.textContent = data[i].name;
     exerciseOneEl.appendChild(titleOne);
@@ -62,15 +66,10 @@ function displayExercise(data) {
     type.textContent = "Type: " + data[i].type;
     exerciseOneEl.appendChild(type);
     var instructions = document.createElement("p");
-    type.textContent = "Instrctions: " + data[i].instructions;
+    instructions.textContent = "Instrctions: " + data[i].instructions;
     exerciseOneEl.appendChild(instructions);
-    exerciseGroup.push(data[i].name);
+    exerciseInput.appendChild(exerciseOneEl);
   }
-
   localStorage.setItem("dailyexercises", JSON.stringify(exerciseGroup));
 }
-
 btn.addEventListener("click", fetchExercises);
-
-// Need to figure out how to store four exercises in local storage,
-// right now is randomizing 1 but only showing one.

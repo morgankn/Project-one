@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+
     <title>Fitness Decider</title>
 </head>
 
@@ -21,21 +23,53 @@
     <header>
        <nav>
         <ul class="menu">
-          <li><a href="#">Daily Workout</a></li>
-          <li><a href="#">Where to Eat</a></li>
+          <li><a href="#" class="navbar">Daily Workout</a></li>
+          <li><a href="#"class="navbar">Where to Eat</a></li>
         </ul>
     </header>
-    <div class="container">
+    <!-- <div class="container">
     <img class='container-child' src="assets/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg" alt="man working out"/>
+    </div> -->
+  
+    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+      <div class="orbit-wrapper">
+        <div class="orbit-controls">
+          <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+          <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+        </div>
+        <ul class="orbit-container">
+          <li class="is-active orbit-slide">
+            <figure class="orbit-figure">
+              <img class="orbit-image" src="assets/karsten-winegeart-0Wra5YYVQJE-unsplash.jpg" alt="Space">
+            </figure>
+          </li>
+          <li class="orbit-slide">
+            <figure class="orbit-figure">
+              <img class="orbit-image" src="assets/pexels-victor-freitas-841130.jpg" alt="Space">
+            </figure>
+          </li>
+          <li class="orbit-slide">
+            <figure class="orbit-figure">
+              <img class="orbit-image" src="assets/boxed-water-is-better-NzZ0FQim5cY-unsplash.jpg" alt="Space">
+            </figure>
+          </li>
+          <li class="orbit-slide">
+            <figure class="orbit-figure">
+              <img class="orbit-image" src="assets/jonathan-borba-zfPOelmDc-M-unsplash.jpg" alt="Space">
+            </figure>
+          </li>
+        </ul>
+      </div>
     </div>
+  
+
     <br>
          <div class="large button-group container">
           <a class="button">Give me my daily workout!  <i class="fa-solid fa-dumbbell"> </i></a>
         </div>
+
  
     <div id="container-input">
-      <div id="exercise-one"></div>
-      
     </div>
     <script src="./assets/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
