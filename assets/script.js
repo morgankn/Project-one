@@ -50,6 +50,7 @@ function chooseMuscle() {
 }
 
 function displayExercise(data) {
+  var exerciseGroup = [];
   // empty the element
   var exerciseGroup = [];
   var exerciseInput = document.querySelector("#container-input");
@@ -69,7 +70,9 @@ function displayExercise(data) {
     instructions.textContent = "Instrctions: " + data[i].instructions;
     exerciseOneEl.appendChild(instructions);
     exerciseInput.appendChild(exerciseOneEl);
+    exerciseGroup.push(data[i].name);
   }
   localStorage.setItem("dailyexercises", JSON.stringify(exerciseGroup));
 }
+
 btn.addEventListener("click", fetchExercises);
