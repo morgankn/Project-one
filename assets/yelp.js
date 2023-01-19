@@ -30,10 +30,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/se
 function randomRestaurantChoice(data){
   console.log('hello');
 var choiceArr = data.businesses;
-// for (var i = 0; i <=1; i++){
-//   var randomArr = choiceArr[Math.floor(Math.random() * choiceArr.length)];
-//   selectedArr.push(randomArr);
-// }
 displayRestaurant(choiceArr);
 }
 
@@ -45,7 +41,7 @@ displayArea.innerHTML = "";
 for (var i = 0; i < selectedArr.length; i++){
   var restaurantOneEl = document.createElement('div');
   restaurantOneEl.classList.add("restaurantCard");
-  var nameOne = document.createElement("h2");
+  var nameOne = document.createElement("h3");
   nameOne.textContent = selectedArr[i].name;
   restaurantOneEl.appendChild(nameOne);
   var rateEl = document.createElement("h4");

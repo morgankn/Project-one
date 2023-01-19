@@ -51,13 +51,10 @@ function chooseMuscle() {
 
 function displayExercise(data) {
   var exerciseGroup = [];
-  // empty the element
   var exerciseGroup = [];
   var exerciseInput = document.querySelector("#container-input");
-  // exerciseInput.innerHTML = "";
 
   for (var i = 0; i <= 1; i++) {
-    // var exerciseOneEl = document.querySelector('#exercise-'+i);
     var exerciseOneEl = document.createElement("div");
     exerciseOneEl.classList.add("exerciseCard");
     var titleOne = document.createElement("h3");
