@@ -54,7 +54,7 @@ function displayExercise(data) {
   // empty the element
   var exerciseGroup = [];
   var exerciseInput = document.querySelector("#container-input");
-  exerciseInput.innerHTML = "";
+  // exerciseInput.innerHTML = "";
 
   for (var i = 0; i <= 3; i++) {
     // var exerciseOneEl = document.querySelector('#exercise-'+i);
