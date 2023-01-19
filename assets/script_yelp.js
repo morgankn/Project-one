@@ -2,7 +2,8 @@ var foodBtn = document.querySelector("#foodBtn");
 var selectedArr = [];
 
 function fetchRestaurant(){
-var city = document.querySelector("#foodBtn").value;
+var city = document.querySelector("#city-input").value;
+console.log(city);
 const options = {
 method: 'GET',
 headers: {
@@ -27,20 +28,22 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/se
 }
 
 function randomRestaurantChoice(data){
+  console.log('hello');
 var choiceArr = data.businesses;
-for (var i = 0; i <=1; i++){
-  var randomArr = choiceArr[Math.floor(Math.random() * choiceArr.length)];
-  selectedArr.push(randomArr);
-}
-displayRestaurant(selectedArr);
+// for (var i = 0; i <=1; i++){
+//   var randomArr = choiceArr[Math.floor(Math.random() * choiceArr.length)];
+//   selectedArr.push(randomArr);
+// }
+displayRestaurant(choiceArr);
 }
 
 function displayRestaurant(selectedArr){
-var displayArea = document.querySelector("#container");
+  console.log(selectedArr)
+var displayArea = document.querySelector("#container-box");
 displayArea.innerHTML = "";
 
-for (var i = 0; i <= 1; i++){
-  var restaurantOneEl = document.querySelector("#container");
+for (var i = 0; i < selectedArr.length; i++){
+  var restaurantOneEl = document.createElement('div');
   restaurantOneEl.classList.add("restaurantCard");
   var nameOne = document.createElement("h2");
   nameOne.textContent = selectedArr[i].name;
@@ -51,6 +54,7 @@ for (var i = 0; i <= 1; i++){
   var addressEl = document.createElement("p");
   addressEl.textContent = "address: " + selectedArr[i].location.address1 + ", " + selectedArr[i].location.city;
   restaurantOneEl.appendChild(addressEl);
+  displayArea.appendChild(restaurantOneEl)
 }
 }
 
