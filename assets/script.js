@@ -56,7 +56,7 @@ function displayExercise(data) {
   var exerciseInput = document.querySelector("#container-input");
   // exerciseInput.innerHTML = "";
 
-  for (var i = 0; i <= 3; i++) {
+  for (var i = 0; i <= 1; i++) {
     // var exerciseOneEl = document.querySelector('#exercise-'+i);
     var exerciseOneEl = document.createElement("div");
     exerciseOneEl.classList.add("exerciseCard");

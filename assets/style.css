@@ -27,9 +27,20 @@ nav {
   text-shadow: 2px 2px var(--peach);
 
   &:hover {
-    /* background-color: var(--) ; */
     color: #7ec384;
   }
+}
+#input {
+  display: flex;
+  justify-content: center;
+}
+#nav-guys {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  font-size: large;
 }
 
 .container {
@@ -89,7 +100,7 @@ nav {
 
 h3 {
   font-family: "Shrikhand", cursive;
-  font-size: 26px;
+  font-size: 28px;
   color: var(--orange);
   text-shadow: 3px 3px var(--teal);
 }
@@ -102,7 +113,9 @@ h4 {
 
 p {
   font-family: "Shrikhand", cursive;
-  font-size: 20px;
+  font-size: 17px;
+  /* padding: 4px; */
+  margin: 4px;
 }
 #box {
   width: 400px;
@@ -118,4 +131,57 @@ p {
   background-color: var(--teal);
   position: relative;
   padding: 4px;
+}
+#yes {
+  font-family: "Shrikhand", cursive;
+  color: var(--red);
+  text-shadow: 2px 2px var(--peach);
+}
+#no {
+  font-family: "Shrikhand", cursive;
+  color: var(--teal);
+  text-shadow: 2px 2px var(--lightblue);
+}
+#yesModall {
+  background-color: var(--lightblue);
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+}
+
+#noModall {
+  background-color: var(--red);
+  text-align: center;
+}
+#footer-divider {
+  background-color: var(--orange);
+  height: 2px;
+  margin-top: 275px;
+}
+footer {
+  font-size: 20px;
+  text-align: center;
+  color: var(--lightblue);
+  padding: 10px 0;
+}
+#container-box {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.restaurantCard {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 24px;
+  background-color: var(--lightblue);
+  width: 48%;
+  align-items: center;
+  border: solid 4px var(--red);
+  margin: 4px;
+  padding: 4px;
+  background-color: var(--lightblue);
+  font-display: center;
 }

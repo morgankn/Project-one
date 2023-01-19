@@ -7,14 +7,17 @@
   </head>
 
 <body>
-  <button id="foodBtn">Where I go</button>
+  <input type="text" id="foodBn"> 
   <div id="container"></div>
 
 <script>
   var foodBtn = document.querySelector("#foodBtn");
   var selectedArr = [];
+  
 
-function fetchRestaurant(){
+
+function fetchRestaurant(city){
+  var city = document.querySelector("#foodBtn").value;
   const options = {
   method: 'GET',
   headers: {
@@ -24,7 +27,7 @@ function fetchRestaurant(){
 };
 // Request temporary access: http://cors-anywhere.herokuapp.com/corsdemo 
 // due to cors problem
-fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=philadelphia&term=restaurant&radius=2000&categories=healthy&sort_by=best_match&limit=10', options)
+fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + city + "&term=healthy%20food&sort_by=best_match&limit=10", options)
   .then(function(result){
     return result.json();
   })
@@ -61,12 +64,12 @@ function displayRestaurant(selectedArr){
     rateEl.textContent = "Rating: " + selectedArr[i].rating;
     restaurantOneEl.appendChild(rateEl);
     var addressEl = document.createElement("p");
-    addressEl.textContent = "address: " + selectedArr[i].location.address1;
+    addressEl.textContent = "address: " + selectedArr[i].location.address1 + ", " + selectedArr[i].location.city;
     restaurantOneEl.appendChild(addressEl);
 }
 }
 
-foodBtn.addEventListener('click', fetchRestaurant)
+foodBtn.addEventListener('submit', fetchRestaurant)
 
 </script>
 </body>
