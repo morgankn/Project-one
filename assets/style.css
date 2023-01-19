@@ -1,197 +1,187 @@
 :root {
-    --lightblue: #8db4ad;
-    --red: #e9311a;
-    --orange: #ed6335;
-    --darkblue: #064c72;
-    --peach: #ecae7d;
-    --teal: #026c80;
-
+  --lightblue: #8db4ad;
+  --red: #e9311a;
+  --orange: #ed6335;
+  --darkblue: #064c72;
+  --peach: #ecae7d;
+  --teal: #026c80;
 }
-body, html {
-    margin-left:.25%;
-    margin-right:.25%;
-    margin-bottom:.25%;
-    margin-top:.25%;
-    background-color: var(--peach);
-    font-family: 'Shrikhand', cursive;
-
-    }
+body,
+html {
+  margin-left: 0.25%;
+  margin-right: 0.25%;
+  margin-bottom: 0.25%;
+  margin-top: 0.25%;
+  background-color: var(--peach);
+  font-family: "Shrikhand", cursive;
+}
 nav {
- font-size: 24px;
- border-radius: 3px;
+  font-size: 24px;
+  border-radius: 3px;
 }
 .menu {
-    background-color: var(--lightblue);
-    ;
+  background-color: var(--lightblue);
 }
 .navbar {
-    color: #e9311a;
-    text-shadow: 2px 2px var(--peach);
+  color: #e9311a;
+  text-shadow: 2px 2px var(--peach);
 
-    &:hover{ 
-        color: #7ec384;
-    }
+  &:hover {
+    color: #7ec384;
+  }
 }
 #input {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 #nav-guys {
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: auto;
-    font-size: large;
-
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  font-size: large;
 }
 
-
-
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .orbit-container {
-    max-width: 700px;
-    margin: 16px;
-    border-radius: 12px;
-    border: var(--darkblue) solid 5px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 700px;
+  margin: 16px;
+  border-radius: 12px;
+  border: var(--darkblue) solid 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .orbit-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .orbit-image {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .button {
-    background-color: var(--orange);
-    border-radius: 6px;
-    font-size: 30px;
-    margin-top: 2px;
-    display: flex;
-    align-items: center;
-    font-family: 'Shrikhand', cursive;
-    box-shadow: 0 0 10px 2px var(--darkblue);
+  background-color: var(--orange);
+  border-radius: 6px;
+  font-size: 30px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  font-family: "Shrikhand", cursive;
+  box-shadow: 0 0 10px 2px var(--darkblue);
 }
-
 
 #container-input {
-    font-family: 'Shrikhand', cursive;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .exerciseCard {
-    font-family: 'Shrikhand', cursive;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    font-size: 24px;
-    background-color: var(--lightblue);
-    width: 48%;
-    align-items: center;
-    border: solid 4px var(--red);
-    margin: 4px;
-    padding: 4px;
-    background-color: var(--lightblue);
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 24px;
+  background-color: var(--lightblue);
+  width: 48%;
+  align-items: center;
+  border: solid 4px var(--red);
+  margin: 4px;
+  padding: 4px;
+  background-color: var(--lightblue);
 }
 
 h3 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 28px;
-    color: var(--orange);
-    text-shadow: 3px 3px var(--teal)
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  color: var(--orange);
+  text-shadow: 3px 3px var(--teal);
 }
 h4 {
-    font-family: 'Shrikhand', cursive;
-    color: var(--red);
-    text-shadow: 2px 2px var(--peach);
-    font-size: 18px;
-
+  font-family: "Shrikhand", cursive;
+  color: var(--red);
+  text-shadow: 2px 2px var(--peach);
+  font-size: 18px;
 }
 
- p {
-    font-family: 'Shrikhand', cursive;
-    font-size: 17px;
-    /* padding: 4px; */
-    margin: 4px;
-
+p {
+  font-family: "Shrikhand", cursive;
+  font-size: 17px;
+  /* padding: 4px; */
+  margin: 4px;
 }
 #box {
-    width:400px;
-    height:150px;
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+  width: 400px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 #water {
-    border: solid 4px var(--red);
-    color: white;
-    background-color: var(--teal);
-    position: relative;
-    padding: 4px;
+  border: solid 4px var(--red);
+  color: white;
+  background-color: var(--teal);
+  position: relative;
+  padding: 4px;
 }
 #yes {
-    font-family: 'Shrikhand', cursive;
-    color: var(--red);
-    text-shadow: 2px 2px var(--peach);
+  font-family: "Shrikhand", cursive;
+  color: var(--red);
+  text-shadow: 2px 2px var(--peach);
 }
 #no {
-    font-family: 'Shrikhand', cursive;
-    color: var(--teal);
-    text-shadow: 2px 2px var(--lightblue);
-
+  font-family: "Shrikhand", cursive;
+  color: var(--teal);
+  text-shadow: 2px 2px var(--lightblue);
 }
 #yesModall {
-    background-color: var(--lightblue);
-    font-family: 'Shrikhand', cursive;
-    text-align: center;  
+  background-color: var(--lightblue);
+  font-family: "Shrikhand", cursive;
+  text-align: center;
 }
 
 #noModall {
-    background-color: var(--red);
-    text-align: center;
-
+  background-color: var(--red);
+  text-align: center;
 }
 #footer-divider {
-    background-color: var(--orange);
-    height: 2px;
-    margin-top: 275px;
+  background-color: var(--orange);
+  height: 2px;
+  margin-top: 275px;
 }
 footer {
-    font-size: 20px;
-    text-align: center;
-    color: var(--lightblue);
-    padding: 10px 0;
+  font-size: 20px;
+  text-align: center;
+  color: var(--lightblue);
+  padding: 10px 0;
 }
 #container-box {
-    font-family: 'Shrikhand', cursive;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
- .restaurantCard { 
-    font-family: 'Shrikhand', cursive;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    font-size: 24px;
-    background-color: var(--lightblue);
-    width: 48%;
-    align-items: center;
-    border: solid 4px var(--red);
-    margin: 4px;
-    padding: 4px;
-    background-color: var(--lightblue); 
-    font-display: center;
-} 
+.restaurantCard {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 24px;
+  background-color: var(--lightblue);
+  width: 48%;
+  align-items: center;
+  border: solid 4px var(--red);
+  margin: 4px;
+  padding: 4px;
+  background-color: var(--lightblue);
+  font-display: center;
+}

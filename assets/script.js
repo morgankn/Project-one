@@ -1,7 +1,6 @@
-var btn = document.querySelector('.button');
+var btn = document.querySelector(".button");
 var savedworkouts = [];
 var workouts = JSON.parse(localStorage.getItem("savedworkouts"));
-
 
 var selectedExercise = [
   "abdominals",
@@ -26,8 +25,9 @@ function muscleGroups() {
   for (var i = 0; i < muscle.length; i++);
   console.log(muscleGroups);
 }
-function fetchExercises(){
-  var muscle = selectedExercise[Math.floor(Math.random() * selectedExercise.length)];
+function fetchExercises() {
+  var muscle =
+    selectedExercise[Math.floor(Math.random() * selectedExercise.length)];
   fetch("https://api.api-ninjas.com/v1/exercises?muscle=" + muscle, {
     method: "GET",
     headers: { "X-Api-Key": "GDPoj1GGfvpCVpqAi3UAYg==YnZXl7SnTbs8tAMJ" },
@@ -37,45 +37,42 @@ function fetchExercises(){
     })
     .then(function (data) {
       console.log(data);
-      displayExercise(data)
+      displayExercise(data);
     })
-  
+
     .catch(function (jqXHR) {
       console.error("Error: ", jqXHR);
-    })
-};
+    });
+}
 
 function chooseMuscle() {
   console.log(data.list[0].muscle);
 }
 
-function displayExercise(data){
+function displayExercise(data) {
   var exerciseGroup = [];
   // empty the element
-   var exerciseInput = document.querySelector('#container-input');
-   exerciseInput.innerHTML =''; 
+  var exerciseGroup = [];
+  var exerciseInput = document.querySelector("#container-input");
+  // exerciseInput.innerHTML = "";
 
-  for(var i =0; i <= 1; i ++ ){
+  for (var i = 0; i <= 1; i++) {
     // var exerciseOneEl = document.querySelector('#exercise-'+i);
-    var exerciseOneEl = document.createElement('div');
-    exerciseOneEl.classList.add('exerciseCard');
-    var titleOne = document.createElement('h3');
+    var exerciseOneEl = document.createElement("div");
+    exerciseOneEl.classList.add("exerciseCard");
+    var titleOne = document.createElement("h3");
     titleOne.textContent = data[i].name;
     exerciseOneEl.appendChild(titleOne);
-    var type =document.createElement('h4');
+    var type = document.createElement("h4");
     type.textContent = "Type: " + data[i].type;
     exerciseOneEl.appendChild(type);
-    var instructions = document.createElement('p');
+    var instructions = document.createElement("p");
     instructions.textContent = "Instrctions: " + data[i].instructions;
     exerciseOneEl.appendChild(instructions);
     exerciseInput.appendChild(exerciseOneEl);
     exerciseGroup.push(data[i].name);
   }
   localStorage.setItem("dailyexercises", JSON.stringify(exerciseGroup));
-};
+}
 
-btn.addEventListener('click', fetchExercises);
-
-
-
-
+btn.addEventListener("click", fetchExercises);
