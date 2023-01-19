@@ -12,32 +12,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Nunito:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="assets/style.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
 
-    <title>Fitness Decider</title>
+    <title>Food Decider</title>
 </head>
         <header>
            <nav>
             <ul class="menu">
-              <li><a href="#" class="navbar">Daily Workout</a></li>
+              <li><a href="./index.html" class="navbar">Daily Workout</a></li>
               <li><a href="#"class="navbar">Where to Eat</a></li>
+              <p id="nav-guys" <i class="fa-solid fa-person-hiking"></i> <i class="fa-solid fa-person-biking "></i> <i class="fa-solid fa-person-running "></i></p>
             </ul>
+
+            </nav>
         </header>
 <body>
+  <br>
+  <div id="input">
+    <input type="text" id="city-input" style="width: 150px" placeholder="Enter your city">
+  </div>
+  <div class="large button-group container">
+    <a class="button" id="foodBtn">Click for healthy food in your city!</i></a>
+  </div>
+<br>
    </div>
+   <div id="container-box">
+  </div>
+  <br>
    <div id="box">
    <div id="water">
     <p>Have you had water today? </p>
-   <div class="button-group align-center">
-    <!-- <p>Have you had water today? </p> -->
-    <a class="button">Yes</a>
-    <a class="button">No</a>
+  <div class="button-group align-center">
+      <a class="button" data-open="yesModall"><i class="fa-solid fa-thumbs-up"></i></a>
+    <div class="tiny reveal" id="yesModall" data-reveal>
+      <h2 id="yes">Way to Go!</h2>
+      <p class="lead">Keep it up!</p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
   </div>
+    <a class="button" data-open="noModall"><i class="fa-solid fa-thumbs-down"></i></a>
+    <div class="tiny reveal" id="noModall" data-reveal>
+      <h2 id="no">Go drink some water!</h2>
+      <p class="lead">Make sure you get at least 8 glasses</p>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   </div>
   </div>
   
         <script src="./assets/script_yelp.js"></script>
+  <div id="footer-divider"></div>
+  <footer>
+    <p <i class="fa-solid fa-person-hiking"></i> <i class="fa-solid fa-person-biking"></i> <i class="fa-solid fa-person-running"></i></p>
+  </footer>
+        <script src="./assets/yelp.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
         crossorigin="anonymous"></script>
